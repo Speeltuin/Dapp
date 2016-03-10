@@ -10,7 +10,7 @@ body {
 
 .container {
     width: 100%;
-    padding: 10px;
+    padding: 1em;
 }
 
 h1 {
@@ -29,7 +29,6 @@ span {
     margin-right: 10px;
 }
 
-
 span::before {
     content: '[';
     margin-right: 5px;
@@ -40,11 +39,6 @@ span::after {
     content: ']';
     margin-left: 5px;
     color: #ddd;
-}
-
-.navigation {
-    padding: 10px;
-    background-color: #fff;
 }
 
 #back {
