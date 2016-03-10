@@ -1,5 +1,5 @@
 {
-  "xtc": {"duration": "6-8h", "category": ["uppers", "moeders"]},
-  "wiet": {"duration": "2-4h", "category": ["uppers"]},
-  "hash": {"duration": "2-4h", "category": ["downers"]}
+  "xtc": {"duration": "6-8 uur", "category": ["upper"]},
+  "wiet": {"duration": "2-4h", "category": ["downer"]},
+  "hasj": {"duration": "2-4h", "category": ["downer"]}
 }
