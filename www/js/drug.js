@@ -8,7 +8,7 @@
     }
 
     function showData(drug) {
-        $.getJSON('data/drugs/' + drug + '.json', displayData)
+        $.getJSON('../data/drugs/' + drug + '.json', displayData)
             .error(gotoIndex);
     }
 
