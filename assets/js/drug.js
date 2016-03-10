@@ -1,7 +1,11 @@
 (function ($) {
 
-    showData(location.href.split('?')[1].split('=')[1]);
-    $('#back').click(gotoIndex);
+    document.addEventListener('deviceready', onDeviceReady, false);
+
+    function onDeviceReady() {
+        showData(location.href.split('?')[1].split('=')[1]);
+        $('#back').click(gotoIndex);
+    }
 
     function showData(drug) {
         $.getJSON('data/drugs/' + drug + '.json', displayData)

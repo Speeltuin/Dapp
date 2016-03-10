@@ -1,7 +1,11 @@
 (function ($) {
 
-    updateList();
-    $('#search').on('change keyup blur', search);
+    document.addEventListener('deviceready', onDeviceReady, false);
+
+    function onDeviceReady() {
+        updateList();
+        $('#search').on('change keyup blur', search);
+    }
 
     function updateList() {
         $.getJSON('data/index.json', parseListing);
