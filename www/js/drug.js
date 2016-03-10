@@ -20,24 +20,32 @@
     function displayData(data) {
         var $main = $('main');
         $main.append( $('<h1>').html(data.name) );
-        $main.append( $('<span>').html( data.details.induction ) );
-        $main.append( $('<span>').html( data.details.duration ) );
-        $main.append( $('<span>').html( data.details.category.join(', ') ) );
+
+        $main.append( $('<div>').html( 'Inductieperiode: ' + data.details.induction ) );
+        $main.append( $('<div>').html( 'Duur: ' + data.details.duration ) );
+
+        var label = data.details.category.length == 1 ? 'Categorie' : 'Categorie&euml;n';
+        $main.append( $('<div>').html( label + ': ' + data.details.category.join(', ') ) );
 
         if ( data.details.information ) {
 
             var $information = $('<section>');
-
-            console.log(data.details.information);
-
             for( var subject in data.details.information ) {
-                $information.append( $('<h2>').html( subject ) );
-                for ( var paragraph in data.details.information[subject] ) {
-                    $information.append( $('<p>').html( data.details.information[subject][paragraph] ) );
-                }
+                parseInformation( subject, data.details.information, $information, 2 );
             }
-
             $main.append($information);
+        }
+    }
+
+    function parseInformation( subject, items, $target, heading ) {
+        $target.append( $('<h' + heading + '>').html( subject ) );
+
+        for ( var subitem in items[subject] ) {
+            if ( typeof items[subject][subitem] !== 'string' ) {
+                parseInformation( subitem, items[subject], $target, heading + 1 );
+            } else {
+                $target.append( $('<p>').html( items[subject][subitem] ) );
+            }
         }
     }
 

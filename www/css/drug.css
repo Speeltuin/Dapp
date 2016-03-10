@@ -21,6 +21,19 @@ span {
     margin-right: 10px;
 }
 
+
+span::before {
+    content: '[';
+    margin-right: 5px;
+    color: #ddd;
+}
+
+span::after {
+    content: ']';
+    margin-left: 5px;
+    color: #ddd;
+}
+
 .navigation {
     padding: 10px;
     background-color: #fff;

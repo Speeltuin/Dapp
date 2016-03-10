@@ -9,7 +9,7 @@
     }
 
     function updateList() {
-        $.getJSON('data/index.json', parseListing).error( function() {
+        $.getJSON('data/index.json', parseListing).error(function () {
             $('#debug').html('error loading json.')
         });
     }
@@ -22,9 +22,11 @@
 
     function addToList(title, data) {
         var $html = $('<article class="drug">');
-        $html.data('drug', title);
+
         $html.append($('<h1>').html(title));
-        $html.append($('<span>').html(data.duration));
+        $html.data('drug', title);
+
+        $html.append($('<span>').html('duur: ' + data.duration));
         $html.append($('<span>').html(data.category.join(', ')));
 
         $html.click(gotoPage);

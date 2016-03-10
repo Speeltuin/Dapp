@@ -35,13 +35,25 @@ body {
 }
 
 #list .drug h1 {
-    margin: 0;
+    margin: 0 0 4px;
     color: black;
 }
 
 #list .drug span {
     margin-right: 10px;
     color: #666;
+}
+
+#list .drug span::before {
+    content: '[';
+    margin-right: 5px;
+    color: #ddd;
+}
+
+#list .drug span::after {
+    content: ']';
+    margin-left: 5px;
+    color: #ddd;
 }
 
 #list .drug.hidden {
