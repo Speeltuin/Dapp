@@ -1,10 +1,7 @@
 (function ($) {
 
-    document.addEventListener("deviceready", function(){
-        showData(location.href.split('?')[1].split('=')[1]);
-
-        $('#back').click(gotoIndex);
-    });
+    showData(location.href.split('?')[1].split('=')[1]);
+    $('#back').click(gotoIndex);
 
     function showData(drug) {
         $.getJSON('data/drugs/' + drug + '.json', displayData)

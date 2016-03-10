@@ -1,9 +1,7 @@
 (function ($) {
 
-    document.addEventListener("deviceready", function () {
-        updateList();
-        $('#search').on('change keyup blur', search);
-    });
+    updateList();
+    $('#search').on('change keyup blur', search);
 
     function updateList() {
         $.getJSON('data/index.json', parseListing);
