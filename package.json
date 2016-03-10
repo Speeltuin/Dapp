@@ -1,0 +1,17 @@
+{
+  "name": "Drugsinfo",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/speeltuin/dapp"
+  },
+  "author": "Jip Moors",
+  "license": "Apache-2.0.0",
+  "keywords": [
+    "ecosystem:phonegap",
+    "ecosystem:cordova",
+    "cordova:template",
+    "phonegap:template"
+  ]
+}

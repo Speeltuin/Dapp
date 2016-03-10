@@ -8,12 +8,12 @@
     }
 
     function showData(drug) {
-        $.getJSON('data/drugs/' + drug + '.json', displayData)
+        $.getJSON('../data/drugs/' + drug + '.json', displayData)
             .error(gotoIndex);
     }
 
     function gotoIndex() {
-        location.href = 'index.html';
+        location.href = '../index.html';
     }
 
     function displayData(data) {
