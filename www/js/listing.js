@@ -39,20 +39,18 @@
     }
 
     function search() {
-        var search = $(this).val();
-
-        $('#debug').html(search);
+        var search = $(this).val().toLowerCase();
 
         $('#list > article').each(function () {
             var $this = $(this);
             var found = false;
 
             // Title search
-            found = ( -1 !== $this.find('h1').html().indexOf(search) );
+            found = ( -1 !== $this.find('h1').text().toLowerCase().indexOf(search) );
 
             // Info search
             $this.find('span').each(function () {
-                found = found || ( -1 !== $(this).html().indexOf(search) );
+                found = found || ( -1 !== $(this).text().toLowerCase().indexOf(search) );
             });
 
             if (found) {
