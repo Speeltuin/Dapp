@@ -1,6 +1,6 @@
 (function ($) {
 
-    $(document).on('ready deviceready', function () {
+    document.addEventListener("deviceready", function(){
         showData(location.href.split('?')[1].split('=')[1]);
 
         $('#back').click(gotoIndex);

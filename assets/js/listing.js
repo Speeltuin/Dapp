@@ -1,6 +1,6 @@
 (function ($) {
 
-    $(document).on('ready deviceready', function () {
+    document.addEventListener("deviceready", function () {
         updateList();
         $('#search').on('change keyup blur', search);
     });
