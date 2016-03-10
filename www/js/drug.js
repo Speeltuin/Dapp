@@ -19,33 +19,40 @@
 
     function displayData(data) {
         var $main = $('main');
-        $main.append( $('<h1>').html(data.name) );
+        $main.append($('<h1>').html(data.name));
 
-        $main.append( $('<div>').html( 'Inductieperiode: ' + data.details.induction ) );
-        $main.append( $('<div>').html( 'Duur: ' + data.details.duration ) );
+        $main.append($('<div>').html('Inductieperiode: ' + data.details.induction));
+        $main.append($('<div>').html('Duur: ' + data.details.duration));
 
         var label = data.details.category.length == 1 ? 'Categorie' : 'Categorie&euml;n';
-        $main.append( $('<div>').html( label + ': ' + data.details.category.join(', ') ) );
+        $main.append($('<div>').html(label + ': ' + data.details.category.join(', ')));
 
-        if ( data.details.information ) {
+        if (data.details.information) {
 
             var $information = $('<section>');
-            for( var subject in data.details.information ) {
-                parseInformation( subject, data.details.information, $information, 2 );
+            for (var subject in data.details.information) {
+                parseInformation(subject, data.details.information, $information, 2);
             }
             $main.append($information);
         }
     }
 
-    function parseInformation( subject, items, $target, heading ) {
-        $target.append( $('<h' + heading + '>').html( subject ) );
+    function parseInformation(subject, items, $target, heading) {
+        $target.append($('<h' + heading + '>').html(subject));
 
-        for ( var subitem in items[subject] ) {
-            if ( typeof items[subject][subitem] !== 'string' ) {
-                parseInformation( subitem, items[subject], $target, heading + 1 );
+        var lines = [];
+
+        for (var subitem in items[subject]) {
+            if (typeof items[subject][subitem] === 'string') {
+                lines.push(items[subject][subitem]);
             } else {
-                $target.append( $('<p>').html( items[subject][subitem] ) );
+                parseInformation(subitem, items[subject], $target, heading + 1);
             }
+        }
+
+        if ( lines.length > 0 ) {
+            var $p = $('<p>').append(lines.join('<br/>'));
+            $target.append($p);
         }
     }
 

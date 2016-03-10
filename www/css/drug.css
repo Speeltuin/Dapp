@@ -17,6 +17,14 @@ h1 {
     margin: 0;
 }
 
+h2, h3, h4 {
+    margin-top: 1.2em;
+    margin-bottom: 0;
+}
+p {
+    margin-top: 0.5em;
+}
+
 span {
     margin-right: 10px;
 }
