@@ -13,5 +13,8 @@
     "ecosystem:cordova",
     "cordova:template",
     "phonegap:template"
-  ]
+  ],
+  "dependencies": {
+    "jsonfile": "^2.2.3"
+  }
 }
