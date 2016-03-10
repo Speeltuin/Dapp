@@ -9,7 +9,7 @@
     }
 
     function showData(drug) {
-        $.getJSON('data/drugs/' + drug + '.json', displayData)
+        $.getJSON('data/drugs/' + drug.toLowerCase() + '.json', displayData)
             .error(gotoIndex);
     }
 
