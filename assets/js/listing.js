@@ -1,10 +1,11 @@
 (function ($) {
 
     document.addEventListener('deviceready', onDeviceReady, false);
+    $(document).ready(onDeviceReady);
 
     function onDeviceReady() {
-        updateList();
         $('#search').on('change keyup blur', search);
+        updateList();
     }
 
     function updateList() {
@@ -37,6 +38,8 @@
 
     function search() {
         var search = $(this).val();
+
+        $('#debug').html(search);
 
         $('#list > article').each(function () {
             var $this = $(this);
