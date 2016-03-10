@@ -9,7 +9,9 @@
     }
 
     function updateList() {
-        $.getJSON('../data/index.json', parseListing);
+        $.getJSON('data/index.json', parseListing).error( function() {
+            $('#debug').html('error loading json.')
+        });
     }
 
     function parseListing(listing) {
