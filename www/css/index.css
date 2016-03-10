@@ -12,6 +12,18 @@ body {
     padding: 1em;
 }
 
+.drug:after {
+    content: '';
+    position: relative;
+    float: right;
+    margin-top: -1em;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #007bff;
+}
+
 #find #search {
     width: 100%;
     padding: 10px 15px;
