@@ -9,7 +9,7 @@
     }
 
     function updateList() {
-        $.getJSON('../data/index.json', parseListing);
+        $.getJSON('data/index.json', parseListing);
     }
 
     function parseListing(listing) {
