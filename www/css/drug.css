@@ -14,26 +14,13 @@ p {
     margin-top: 0.5em;
 }
 
-span {
-    margin-right: 10px;
-}
-
-span::before {
-    content: '[';
-    margin-right: 5px;
-    color: #ddd;
-}
-
-span::after {
-    content: ']';
-    margin-left: 5px;
-    color: #ddd;
-}
-
 #back {
     display: block;
-    padding: 5px 10px;
+    padding: 5px 16px;
     font-size: 1em;
     line-height: 30px;
     font-weight: bold;
+
+
+    border-radius: 0;
 }
