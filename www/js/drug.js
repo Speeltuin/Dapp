@@ -1,6 +1,7 @@
 (function ($) {
 
     document.addEventListener('deviceready', onDeviceReady, false);
+    $(document).ready(onDeviceReady);
 
     function onDeviceReady() {
         showData(location.href.split('?')[1].split('=')[1]);
@@ -8,12 +9,12 @@
     }
 
     function showData(drug) {
-        $.getJSON('../data/drugs/' + drug + '.json', displayData)
+        $.getJSON('data/drugs/' + drug + '.json', displayData)
             .error(gotoIndex);
     }
 
     function gotoIndex() {
-        location.href = '../index.html';
+        location.href = 'index.html';
     }
 
     function displayData(data) {
