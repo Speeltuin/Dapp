@@ -1,0 +1,35 @@
+* {
+    position: relative;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 1em;
+}
+
+.container {
+    width: 100%;
+    padding: 10px;
+}
+
+h1 {
+    margin: 0;
+}
+
+span {
+    margin-right: 10px;
+}
+
+.navigation {
+    padding: 10px;
+    background-color: #fff;
+}
+
+#back {
+    display: block;
+    padding: 4px 10px;
+    font-size: 1em;
+    line-height: 30px;
+    font-weight: bold;
+}

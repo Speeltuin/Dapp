@@ -1,0 +1,49 @@
+* {
+    position: relative;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 1em;
+}
+
+.container {
+    width: 100%;
+    padding: 1em;
+}
+
+#find form {
+    margin: 0;
+    padding: 0;
+}
+
+#find #search {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#list .drug {
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 10px 1em;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#list .drug h1 {
+    margin: 0;
+    color: black;
+}
+
+#list .drug span {
+    margin-right: 10px;
+    color: #666;
+}
+
+#list .drug.hidden {
+    display: none;
+}

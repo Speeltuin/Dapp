@@ -1,8 +1,24 @@
 <html>
 <head>
-<title>D-App</title>
+    <title>Overzicht</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <script type="application/javascript" src="assets/js/vendor/jquery/jquery-2.2.1.min.js"></script>
+    <script type="application/javascript" src="assets/js/listing.js"></script>
 </head>
-<body>
-Welcome.
+
+<body class="listing">
+
+<section id="find">
+    <div class="container">
+        <form method="get" action="">
+            <input type="text" id="search" placeholder="Vind jouw favoriete drug..."/>
+        </form>
+    </div>
+</section>
+
+<main>
+    <div class="container" id="list"></div>
+</main>
+
 </body>
 </html>
