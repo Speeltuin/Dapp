@@ -1,6 +1,6 @@
 (function ($) {
 
-    $(document).ready(function () {
+    $(document).on('ready deviceready', function () {
         showData(location.href.split('?')[1].split('=')[1]);
 
         $('#back').click(gotoIndex);
