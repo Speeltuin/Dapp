@@ -3,15 +3,14 @@
   "details": {
     "category": ["Uppers"],
     "duration": "6-8h",
-    "induction": "1h",
+    "induction": "20 minuten",
     "information": {
-      "subject": [
-        "line of stuff",
-        "line of stuff 2"],
-      "zwangerschap": [
-        "Taco",
-        "Fay",
-        "Pinda"
+      "Effecten": [
+        "Je krijgt meer energie en hebt meer behoefte aan contact.",
+        "Pupillen worden groter, je hart gaat sneller kloppen en je lichaamstemperatuur gaat omhoog."],
+      "Eerste Hulp": [
+        "Bij angst of te hard gaan: Zoek een rustige plek, stel hem gerust en geef iets (zoets) zonder alcohol te drinken.",
+        "Kaakklem: Schakel direct de EHBO in of bel 112!"
       ]
     }
   }
